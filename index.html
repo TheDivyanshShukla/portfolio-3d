@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divyansh Shukla | AI Builder & Automation Expert</title>
+    <meta name="description"
+        content="AI Builder, Prompt Engineer, and Automation Expert specializing in full-stack AI applications and cybersecurity.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <!-- Google Fonts - Cinematic Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Three.js for 3D -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-content">
+            <div class="preloader-line"></div>
+            <div class="preloader-counter">0%</div>
+        </div>
+    </div>
+
+    <!-- 3D Canvas Background -->
+    <canvas id="webgl-canvas"></canvas>
+
+    <!-- Noise Texture Overlay -->
+    <div class="noise-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="logo">
+                <span class="logo-text">DIVYANSH</span>
+                <span class="logo-dot">.</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress"></div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-label" data-scroll-reveal>
+                    <span class="hero-label-icon">◆</span>
+                    <span class="hero-label-text">AI BUILDER & AUTOMATION EXPERT</span>
+                </div>
+
+                <h1 class="hero-title" data-scroll-reveal>
+                    <span class="hero-title-line">BUILDING</span>
+                    <span class="hero-title-line hero-title-accent">AI & AUTOMATION</span>
+                    <span class="hero-title-line">SYSTEMS</span>
+                </h1>
+
+                <p class="hero-subtitle" data-scroll-reveal>
+                    From live web applications like <strong>NaraVirtual.in</strong> to cybersecurity toolkits on <strong>SCANCROS.in</strong>, I turn complex ideas into deployed reality. Currently scaling <strong>CampusPrep.in</strong>.
+                </p>
+
+                <div class="hero-cta" data-scroll-reveal>
+                    <a href="#projects" class="btn btn-primary">
+                        <span class="btn-text">View Projects</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+                    <a href="https://thedivyanshshukla.onrender.com/"
+                        target="_blank" class="btn btn-secondary">
+                        <span class="btn-text">Live Portfolio</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator" data-scroll-reveal>
+                <div class="scroll-indicator-line"></div>
+                <span class="scroll-indicator-text">SCROLL</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <div class="section-header" data-scroll-reveal>
+                <span class="section-label">WHO I AM</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
+
+            <div class="about-grid">
+                <!-- Left Column: Profile Card -->
+                <div class="about-profile-wrapper" data-scroll-reveal>
+                    <div class="profile-card">
+                        <div class="profile-image-container">
+                            <div class="profile-image-glow"></div>
+                            <img src="assets/images/profile.jpg" alt="Divyansh Shukla" class="profile-image-real">
+                        </div>
+                        <h3 class="profile-name">Divyansh Shukla</h3>
+                        <p class="profile-role">AI Builder & Automation Expert</p>
+                        <div class="profile-social">
+                            <a href="https://github.com/TheDivyanshShukla" target="_blank" class="social-link" title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/thedivyanshshukla" target="_blank" class="social-link" title="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://thedivyanshshukla.onrender.com/" class="social-link" title="Website">
+                                <i class="fas fa-globe"></i>
+                            </a>
+                        </div>
+                        <div class="profile-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>India</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Bio & Stats -->
+                <div class="about-bio" data-scroll-reveal>
+                    <div class="about-badge">
+                        <span class="badge-icon"><i class="fas fa-robot"></i></span>
+                        <span class="badge-text">AI Architect</span>
+                    </div>
+
+                    <h3 class="about-headline">Turning Complex Ideas Into <span class="text-gradient">Elegant
+                            Reality</span></h3>
+
+                    <div class="about-text-content">
+                        <p>
+                            I'm an <strong>AI Builder, Prompt Engineer, and Automation Expert</strong> pursuing my <strong>Bachelor of Technology in Computer Science with AI-DS</strong>. Passionate about GenAI, scalable web systems, and real-world automation, I have hands-on experience in building full-stack AI applications, deploying ML systems, and designing cybersecurity tools.
+                        </p>
+                        <p>
+                            Currently seeking roles focused on <strong>AI, automation, or secure full-stack development.</strong> I'm always open to collaboration and freelance projects that push the boundaries of what's possible with technology.
+                        </p>
+                    </div>
+
+                    <div class="about-stats-enhanced">
+                        <div class="stat-item">
+                            <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
+                            <div class="stat-info">
+                                <span class="stat-value">15+</span>
+                                <span class="stat-label">Projects Shipped</span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon"><i class="fas fa-layer-group"></i></div>
+                            <div class="stat-info">
+                                <span class="stat-value">20+</span>
+                                <span class="stat-label">Tech Stack</span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon"><i class="fas fa-trophy"></i></div>
+                            <div class="stat-info">
+                                <span class="stat-value">4</span>
+                                <span class="stat-label">Hackathon Wins</span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon"><i class="fas fa-code-branch"></i></div>
+                            <div class="stat-info">
+                                <span class="stat-value">2+</span>
+                                <span class="stat-label">Years Exp.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="skills-container">
+            <div class="section-header" data-scroll-reveal>
+                <span class="section-label">TECH STACK</span>
+                <h2 class="section-title">Skills & Technologies</h2>
+                <p class="section-subtitle">Tools I use to build exceptional digital experiences</p>
+            </div>
+
+            <!-- Proficiency Bars -->
+            <div class="proficiency-section" data-scroll-reveal>
+                <h3 class="proficiency-title">Core Competencies</h3>
+                <div class="proficiency-grid">
+                    <div class="proficiency-item">
+                        <div class="proficiency-header">
+                            <span class="proficiency-name">AI & GenAI (LLMs, RAG, Agents)</span>
+                            <span class="proficiency-percent">95%</span>
+                        </div>
+                        <div class="proficiency-bar">
+                            <div class="proficiency-fill" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="proficiency-item">
+                        <div class="proficiency-header">
+                            <span class="proficiency-name">Prompt Engineering & LangChain</span>
+                            <span class="proficiency-percent">90%</span>
+                        </div>
+                        <div class="proficiency-bar">
+                            <div class="proficiency-fill" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="proficiency-item">
+                        <div class="proficiency-header">
+                            <span class="proficiency-name">Backend (Django, FastAPI, Python)</span>
+                            <span class="proficiency-percent">88%</span>
+                        </div>
+                        <div class="proficiency-bar">
+                            <div class="proficiency-fill" style="width: 88%"></div>
+                        </div>
+                    </div>
+                    <div class="proficiency-item">
+                        <div class="proficiency-header">
+                            <span class="proficiency-name">Cybersecurity & Automation</span>
+                            <span class="proficiency-percent">85%</span>
+                        </div>
+                        <div class="proficiency-bar">
+                            <div class="proficiency-fill" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Stack Grid - Enhanced -->
+            <div class="tech-stack-grid-enhanced">
+                <!-- Frontend -->
+                <div class="tech-category-enhanced" data-scroll-reveal>
+                    <div class="tech-category-header">
+                        <div class="tech-category-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>AI & GenAI</h3>
+                    </div>
+                    <div class="tech-items-grid">
+                        <div class="tech-badge">
+                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #FF6B6B, #EE5253);">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <span class="tech-badge-name">LLMs (OpenAI, Anthropic)</span>
+                        </div>
+                        <div class="tech-badge">
+                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #10b981, #059669);">
+                                <i class="fas fa-link"></i>
+                            </div>
+                            <span class="tech-badge-name">LangChain / Langfuse</span>
+                        </div>
+                        <div class="tech-badge">
+                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #6366f1, #4f46e5);">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <span class="tech-badge-name">ChromaDB / Pinecone</span>
+                        </div>
+                        <div class="tech-badge">
+                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <span class="tech-badge-name">RAG / Agents</span>
+                        </div>
+                        <div class="tech-badge">
+                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #ee82ee, #8a2be2);">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <span class="tech-badge-name">MediaPipe / SpaCy</span>
+                        </div>
+                        <div class="tech-badge">
+                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #0ea5e9, #0284c7);">
+                                <i class="fas fa-magic"></i>
+                            </div>
+                            <span class="tech-badge-name">Prompt Eng.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="tech-category-enhanced" data-scroll-reveal>
+                    <div class="tech-category-header">
+                        <div class="tech-category-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <rect x="2" y="3" width="20" height="14" rx="2" stroke-width="2" />
+                                <path d="M8 21h8M12 17v4" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <h3>Web & Backend</h3>
+                    </div>
+                    <div class="tech-items-grid">
+                        <div class="tech-badge">
+                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #092e20, #0c4b33);">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <span class="tech-badge-name">Django</span>
+                        </div>
+                        <div class="tech-badge">
+                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #059669, #10b981);">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <span class="tech-badge-name">FastAPI</span>
+                        </div>
+                        <div class="tech-badge">
+                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #3776ab, #ffd43b);">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <span class="tech-badge-name">Python</span>
+                        </div>
+                        <div class="tech-badge">
+                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #06b6d4, #0891b2);">
+                                <i class="fas fa-wind"></i>
+                            </div>
+                            <span class="tech-badge-name">Tailwind CSS</span>
+                        </div>
+                        <div class="tech-badge">
+                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #e34c26, #f06529);">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <span class="tech-badge-name">HTML5/CSS3</span>
+                        </div>
+                        <div class="tech-badge">
+                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #f0db4f, #f7df1e);">
+                                <i class="fab fa-js" style="color: #000;"></i>
+                            </div>
+                            <span class="tech-badge-name">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Database & Tools -->
+                <div class="tech-category-enhanced" data-scroll-reveal>
+                    <div class="tech-category-header">
+                        <div class="tech-category-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3>Cloud & Infrastructure</h3>
+                    </div>
+                    <div class="tech-items-grid">
+                        <div class="tech-badge">
+                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #336791, #2f5e85);">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <span class="tech-badge-name">PostgreSQL / SQL</span>
+                        </div>
+                        <div class="tech-badge">
+                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #47a248, #3f9142);">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <span class="tech-badge-name">MongoDB / Redis</span>
+                        </div>
+                        <div class="tech-badge">
+                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #ff9900, #ffb347);">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <span class="tech-badge-name">Contabo / AWS</span>
+                        </div>
+                        <div class="tech-badge">
+                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #003b57, #002a3e);">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <span class="tech-badge-name">SQLite</span>
+                        </div>
+                        <div class="tech-badge">
+                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #2496ed, #1d7fc5);">
+                                <i class="fab fa-docker"></i>
+                            </div>
+                            <span class="tech-badge-name">Docker / Render</span>
+                        </div>
+                        <div class="tech-badge">
+                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #f05032, #e84e31);">
+                                <i class="fab fa-git-alt"></i>
+                            </div>
+                            <span class="tech-badge-name">Git / GitHub</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cybersecurity -->
+                <div class="tech-category-enhanced" data-scroll-reveal>
+                    <div class="tech-category-header">
+                        <div class="tech-category-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>Automation & IoT</h3>
+                    </div>
+                    <div class="tech-items-grid">
+                        <div class="tech-badge">
+                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #ef4444, #b91c1c);">
+                                <i class="fas fa-spider"></i>
+                            </div>
+                            <span class="tech-badge-name">Selenium / Playwright</span>
+                        </div>
+                        <div class="tech-badge">
+                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #3b82f6, #1d4ed8);">
+                                <i class="fas fa-user-secret"></i>
+                            </div>
+                            <span class="tech-badge-name">Ethical Hacking</span>
+                        </div>
+                        <div class="tech-badge">
+                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #22c55e, #15803d);">
+                                <i class="fas fa-microchip"></i>
+                            </div>
+                            <span class="tech-badge-name">ESP32 / XIAO</span>
+                        </div>
+                        <div class="tech-badge">
+                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #c026d3, #86198f);">
+                                <i class="fab fa-raspberry-pi"></i>
+                            </div>
+                            <span class="tech-badge-name">RPi Zero 2 W</span>
+                        </div>
+                        <div class="tech-badge">
+                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #0ea5e9, #0284c7);">
+                                <i class="fas fa-terminal"></i>
+                            </div>
+                            <span class="tech-badge-name">Hashcat</span>
+                        </div>
+                        <div class="tech-badge">
+                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #f43f5e, #e11d48);">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <span class="tech-badge-name">FFmpeg / Vision</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="projects-container">
+            <div class="section-header" data-scroll-reveal>
+                <span class="section-label">PORTFOLIO</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Real-world applications built with modern technologies</p>
+            </div>
+            <div class="projects-showcase">
+                <!-- Project 1: campusprep.in -->
+                <article class="project-showcase-item" data-scroll-reveal>
+                    <div class="project-visual">
+                        <div class="project-visual-inner">
+                            <div class="project-visual-overlay"></div>
+                            <div class="project-visual-temp" style="width: 100%; height: 100%; background: linear-gradient(135deg, #1a1a2e, #16213e); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 2rem; font-weight: 700;">CAMPUSPREP</div>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-number-large">01</div>
+                        <h3 class="project-title-large">CampusPrep.in</h3>
+                        <div class="project-meta">
+                            <span class="project-type"><i class="fas fa-graduation-cap"></i> RGPV EdTech</span>
+                            <span class="project-separator">•</span>
+                            <span class="project-type"><i class="fas fa-brain"></i> AI Learning</span>
+                        </div>
+                        <p class="project-desc-large">
+                            A specialized learning platform for <strong>RGPV B.Tech</strong> students. It provides subject-wise analytics, solved/unsolved <strong>PYQs</strong>, short notes, and branch-specific curriculum. Students can generate custom notes and track their preparation through individual analytics.
+                        </p>
+                        <div class="project-impact-box">
+                            <i class="fas fa-chart-line"></i>
+                            <span><strong>Analytics:</strong> Includes subject-level performance metrics and AI-driven recommendations based on RGPV exam patterns.</span>
+                        </div>
+                        <div class="project-tech-stack">
+                            <span class="tech-pill"><i class="fas fa-bolt"></i> FastAPI</span>
+                            <span class="tech-pill"><i class="fas fa-database"></i> PostgreSQL</span>
+                            <span class="tech-pill"><i class="fas fa-brain"></i> AI Analysis</span>
+                            <span class="tech-pill"><i class="fas fa-file-alt"></i> PYQ Engine</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://campusprep.in" target="_blank" class="btn btn-primary btn-sm">
+                                <span class="btn-text">Visit Live</span>
+                                <span class="btn-icon"><i class="fas fa-external-link-alt"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2: loci.naravirtual.in -->
+                <article class="project-showcase-item" data-scroll-reveal>
+                    <div class="project-visual">
+                        <div class="project-visual-inner">
+                            <div class="project-visual-overlay"></div>
+                            <div class="project-visual-temp" style="width: 100%; height: 100%; background: linear-gradient(135deg, #6c5ce7, #a29bfe); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 2rem; font-weight: 700;">LOCI AI</div>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-number-large">02</div>
+                        <h3 class="project-title-large">Loci: AI Mind Palace</h3>
+                        <div class="project-meta">
+                            <span class="project-type"><i class="fas fa-brain"></i> Memory Tech</span>
+                            <span class="project-separator">•</span>
+                            <span class="project-type"><i class="fas fa-bolt"></i> Speed Reading</span>
+                        </div>
+                        <p class="project-desc-large">
+                            Unlock your subconscious with an AI-powered <strong>Mind Palace</strong>. Combined with a high-speed <strong>RSVP Engine</strong> (1000+ WPM), it converts abstract text into vivid spatial memories and verifies retention with AI-generated quizzes.
+                        </p>
+                        <div class="project-impact-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <span><strong>Science:</strong> Retain complex knowledge 2x-5x faster by merging ancient memory techniques with modern AI acceleration.</span>
+                        </div>
+                        <div class="project-tech-stack">
+                            <span class="tech-pill"><i class="fas fa-microchip"></i> RSVP Engine</span>
+                            <span class="tech-pill"><i class="fas fa-brain"></i> AI Assessment</span>
+                            <span class="tech-pill"><i class="fas fa-images"></i> Loci Imagery</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://loci.naravirtual.in" target="_blank" class="btn btn-primary btn-sm">
+                                <span class="btn-text">Visit Live</span>
+                                <span class="btn-icon"><i class="fas fa-external-link-alt"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3: NaraVirtual.in -->
+                <article class="project-showcase-item" data-scroll-reveal>
+                    <div class="project-visual">
+                        <div class="project-visual-inner">
+                            <div class="project-visual-overlay"></div>
+                            <div class="project-visual-temp" style="width: 100%; height: 100%; background: linear-gradient(135deg, #2d3436, #000); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 2rem; font-weight: 700;">NARAVIRTUAL Hub</div>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-number-large">03</div>
+                        <h3 class="project-title-large">NaraVirtual.in Hub</h3>
+                        <div class="project-meta">
+                            <span class="project-type"><i class="fas fa-cloud"></i> AI SaaS Platform</span>
+                            <span class="project-separator">•</span>
+                            <span class="project-type"><i class="fas fa-code"></i> Full-Stack Hub</span>
+                        </div>
+                        <p class="project-desc-large">
+                            A modular AI-powered SaaS platform providing real-time AI utilities and production-ready toolsets. Designed with a focus on high-performance infrastructure and intuitive user experiences.
+                        </p>
+                        <div class="project-impact-box">
+                            <i class="fas fa-check-circle"></i>
+                            <span><strong>Core:</strong> Centralized hub for production-ready AI services with automated billing and multi-tenant scaling.</span>
+                        </div>
+                        <div class="project-tech-stack">
+                            <span class="tech-pill"><i class="fas fa-code"></i> Django</span>
+                            <span class="tech-pill"><i class="fas fa-wind"></i> Tailwind CSS</span>
+                            <span class="tech-pill"><i class="fas fa-brain"></i> OpenAI Hub</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://naravirtual.in" target="_blank" class="btn btn-primary btn-sm">
+                                <span class="btn-text">Visit Live</span>
+                                <span class="btn-icon"><i class="fas fa-external-link-alt"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4: SCANCROS.in -->
+                <article class="project-showcase-item" data-scroll-reveal>
+                    <div class="project-visual">
+                        <div class="project-visual-inner">
+                            <div class="project-visual-overlay"></div>
+                            <div class="project-visual-temp" style="width: 100%; height: 100%; background: linear-gradient(135deg, #d63031, #000); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 2rem; font-weight: 700;">SCANCROS</div>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-number-large">04</div>
+                        <h3 class="project-title-large">SCANCROS.in</h3>
+                        <div class="project-meta">
+                            <span class="project-type"><i class="fas fa-shield-alt"></i> Cybersecurity</span>
+                            <span class="project-separator">•</span>
+                            <span class="project-type"><i class="fas fa-terminal"></i> Automation</span>
+                        </div>
+                        <p class="project-desc-large">
+                            Created a powerful toolkit for bug bounty hunters. Automated vulnerability scanning and integrated advanced security testing modules.
+                        </p>
+                        <div class="project-impact-box">
+                            <i class="fas fa-bug"></i>
+                            <span><strong>Usage:</strong> Helps security researchers discover and report vulnerabilities faster through automated pipelines.</span>
+                        </div>
+                        <div class="project-tech-stack">
+                            <span class="tech-pill"><i class="fab fa-python"></i> Python</span>
+                            <span class="tech-pill"><i class="fas fa-search"></i> Vuln Scanning</span>
+                            <span class="tech-pill"><i class="fas fa-robot"></i> Automation</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://scancros.in" target="_blank" class="btn btn-primary btn-sm">
+                                <span class="btn-text">Visit Live</span>
+                                <span class="btn-icon"><i class="fas fa-external-link-alt"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 5: JARVIS AI -->
+                <article class="project-showcase-item" data-scroll-reveal>
+                    <div class="project-visual">
+                        <div class="project-visual-inner">
+                            <div class="project-visual-overlay"></div>
+                            <div class="project-visual-temp" style="width: 100%; height: 100%; background: linear-gradient(135deg, #0984e3, #000); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 2rem; font-weight: 700;">JARVIS</div>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-number-large">05</div>
+                        <h3 class="project-title-large">JARVIS: AI Assistant</h3>
+                        <div class="project-meta">
+                            <span class="project-type"><i class="fas fa-microphone"></i> Voice UI</span>
+                            <span class="project-separator">•</span>
+                            <span class="project-type"><i class="fas fa-robot"></i> AI/ML</span>
+                        </div>
+                        <p class="project-desc-large">
+                            Designed a voice-controlled AI assistant with real-time responses, inspired by Iron Man's interface. Enabled system control and feedback loop using AI models.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-pill"><i class="fab fa-python"></i> Python</span>
+                            <span class="tech-pill"><i class="fas fa-wave-square"></i> Speech Rec.</span>
+                            <span class="tech-pill"><i class="fas fa-brain"></i> ML Models</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://www.youtube.com/watch?v=0e9AmmVN4NU" target="_blank" class="btn btn-primary btn-sm">
+                                <span class="btn-text">Watch Demo</span>
+                                <span class="btn-icon"><i class="fab fa-youtube"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 6: Gesture Control System -->
+                <article class="project-showcase-item" data-scroll-reveal>
+                    <div class="project-visual">
+                        <div class="project-visual-inner">
+                            <div class="project-visual-overlay"></div>
+                            <div class="project-visual-temp" style="width: 100%; height: 100%; background: linear-gradient(135deg, #00b894, #000); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 2rem; font-weight: 700;">GESTURE CONTROL</div>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-number-large">06</div>
+                        <h3 class="project-title-large">Gesture Control System</h3>
+                        <div class="project-meta">
+                            <span class="project-type"><i class="fas fa-hand-paper"></i> HCI</span>
+                            <span class="project-separator">•</span>
+                            <span class="project-type"><i class="fas fa-eye"></i> Computer Vision</span>
+                        </div>
+                        <p class="project-desc-large">
+                            Developed a touchless HCI interface that lets users control systems via hand gestures. Implemented gesture recognition using OpenCV and Python.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-pill"><i class="fab fa-python"></i> Python</span>
+                            <span class="tech-pill"><i class="fas fa-camera"></i> OpenCV</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://www.youtube.com/watch?v=6vzo15y_CwA" target="_blank" class="btn btn-primary btn-sm">
+                                <span class="btn-text">Watch Demo</span>
+                                <span class="btn-icon"><i class="fab fa-youtube"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 7: WPA2 Cracking Demo -->
+                <article class="project-showcase-item" data-scroll-reveal>
+                    <div class="project-visual">
+                        <div class="project-visual-inner">
+                            <div class="project-visual-overlay"></div>
+                            <div class="project-visual-temp" style="width: 100%; height: 100%; background: linear-gradient(135deg, #6c5ce7, #000); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 2rem; font-weight: 700;">WPA2 CRACKING</div>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-number-large">07</div>
+                        <h3 class="project-title-large">WPA2 Cracking Demo</h3>
+                        <div class="project-meta">
+                            <span class="project-type"><i class="fas fa-wifi"></i> Network Security</span>
+                            <span class="project-separator">•</span>
+                            <span class="project-type"><i class="fas fa-user-shield"></i> Ethical Hacking</span>
+                        </div>
+                        <p class="project-desc-large">
+                            Ethical hacking project demonstrating WPA2 security breaches. Automated password cracking pipeline using Hashcat for security education.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-pill"><i class="fab fa-python"></i> Python</span>
+                            <span class="tech-pill"><i class="fas fa-key"></i> Hashcat</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://youtu.be/lsJJ6of6vSk" target="_blank" class="btn btn-primary btn-sm">
+                                <span class="btn-text">Watch Demo</span>
+                                <span class="btn-icon"><i class="fab fa-youtube"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements-section">
+        <div class="achievements-container">
+            <div class="section-header" data-scroll-reveal>
+                <span class="section-label">MILESTONES</span>
+                <h2 class="section-title">Achievements & Recognition</h2>
+                <p class="section-subtitle">Hackathons, certifications, and competitive programming</p>
+            </div>
+
+            <div class="timeline-container">
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item" data-scroll-reveal>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Current</div>
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3 class="timeline-title">Production Deployments</h3>
+                        <p class="timeline-description">
+                            Multiple <strong>AI/ML & Cybersecurity</strong> systems successfully deployed and running in production environments.
+                        </p>
+                        <span class="timeline-tag">Production</span>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item" data-scroll-reveal>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2024-25</div>
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3 class="timeline-title">Independent SaaS Projects</h3>
+                        <p class="timeline-description">
+                            Built and scaled <strong>NaraVirtual.in</strong> and <strong>SCANCROS.in</strong> independently, focusing on GenAI and Security.
+                        </p>
+                        <span class="timeline-tag">Independent Builder</span>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item" data-scroll-reveal>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2024-25</div>
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3 class="timeline-title">VPS Architecture & Scaling</h3>
+                        <p class="timeline-description">
+                            Expertise in managing and deploying high-traffic systems on <strong>Contabo VPS</strong> and <strong>Render</strong>. Optimized server costs while maintaining performance.
+                        </p>
+                        <span class="timeline-tag">Infrastructure</span>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 4 -->
+                <div class="timeline-item" data-scroll-reveal>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2025</div>
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="timeline-title">Open Source & Collaboration</h3>
+                        <p class="timeline-description">
+                            Actively contributing to AI and cybersecurity communities. Open to collaborations on <strong>Agentic Frameworks</strong> and <strong>Security Automation</strong>.
+                        </p>
+                        <span class="timeline-tag">Community</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <div class="section-header" data-scroll-reveal>
+                <span class="section-label">GET IN TOUCH</span>
+                <h2 class="section-title">Let's Build Something<br>Together</h2>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info" data-scroll-reveal>
+                    <div class="contact-status">
+                        <span class="status-dot"></span>
+                        <span class="status-text">Available for new opportunities</span>
+                    </div>
+
+                    <p class="contact-intro">
+                        Have an idea? Let's build it. I'm currently looking for <span class="text-highlight">Full-Stack
+                            roles</span> or challenging freelance projects.
+                    </p>
+
+                    <div class="contact-details">
+                        <a href="mailto:shukladivyansh953@gmail.com" class="contact-card-item">
+                            <div class="contact-icon-box">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text-group">
+                                <span class="contact-label-small">Email</span>
+                                <span class="contact-value-large">shukladivyansh953@gmail.com</span>
+                            </div>
+                        </a>
+
+                        <div class="contact-card-item">
+                            <div class="contact-icon-box">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text-group">
+                                <span class="contact-label-small">Location</span>
+                                <span class="contact-value-large">India</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-connect">
+                        <h4 class="social-heading">Connect with me</h4>
+                        <div class="social-links-large">
+                            <a href="https://github.com/TheDivyanshShukla" target="_blank" class="social-btn-large" title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/thedivyanshshukla" target="_blank" class="social-btn-large" title="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://thedivyanshshukla.onrender.com/" class="social-btn-large" title="Website">
+                                <i class="fas fa-globe"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper" data-scroll-reveal>
+                    <form class="contact-form-premium" id="contact-form" action="https://formspree.io/f/mkogladz"
+                        method="POST">
+                        <h3 class="form-title">Send a Message</h3>
+                        <div class="form-grid">
+                            <div class="form-group-premium">
+                                <input type="text" id="name" name="name" required placeholder=" ">
+                                <label for="name">Your Name</label>
+                                <i class="fas fa-user input-icon"></i>
+                            </div>
+                            <div class="form-group-premium">
+                                <input type="email" id="email" name="email" required placeholder=" ">
+                                <label for="email">Your Email</label>
+                                <i class="fas fa-envelope input-icon"></i>
+                            </div>
+                        </div>
+                        <div class="form-group-premium">
+                            <input type="text" id="subject" name="subject" required placeholder=" ">
+                            <label for="subject">Subject</label>
+                            <i class="fas fa-tag input-icon"></i>
+                        </div>
+                        <div class="form-group-premium">
+                            <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+                            <label for="message">Your Message</label>
+                            <i class="fas fa-comment-alt input-icon textarea-icon"></i>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg btn-glow">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p class="footer-quote">"The best code is the code that ships."</p>
+            <p class="footer-text">© 2024-25 Divyansh Shukla • Built with intention • Designed for impact</p>
+        </div>
+    </footer>
+
+    <!-- Thank You Modal -->
+    <div class="modal-overlay" id="thankYouModal">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2 class="modal-title">Thank You!</h2>
+            <p class="modal-message">Your message has been sent successfully. I'll get back to you as soon as possible.
+            </p>
+            <button class="btn btn-primary" onclick="closeModal()">
+                <span class="btn-text">Close</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-outline"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
