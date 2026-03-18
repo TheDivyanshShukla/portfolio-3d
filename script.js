@@ -61,7 +61,40 @@ class Background3D {
         this.createMesh();
         this.setupLights();
         this.setupEventListeners();
+        this.setupThemeListener();
         this.animate();
+    }
+
+    setupThemeListener() {
+        window.addEventListener('themeChanged', (e) => {
+            this.updateThemeColors(e.detail.theme);
+        });
+
+        // initial check
+        const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+        this.updateThemeColors(currentTheme);
+    }
+
+    updateThemeColors(theme) {
+        if (!this.scene || !this.mesh) return;
+        
+        if (theme === 'light') {
+            this.scene.fog.color.set(0xfcfcfc);
+            this.mesh.material.color.set(0x4a9eff);
+            this.mesh.material.metalness = 0.3;
+            this.mesh.material.roughness = 0.9;
+            this.mesh.material.emissiveIntensity = 0;
+            this.mesh.material.opacity = 0.6;
+            this.mesh.material.transparent = true;
+        } else {
+            this.scene.fog.color.set(0x050505);
+            this.mesh.material.color.set(0x4a9eff);
+            this.mesh.material.metalness = 0.9;
+            this.mesh.material.roughness = 0.1;
+            this.mesh.material.emissiveIntensity = 0.3;
+            this.mesh.material.opacity = 1;
+            this.mesh.material.transparent = false;
+        }
     }
 
     setupScene() {
@@ -518,6 +551,55 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // ========================================
+// THEME SWITCHER (DARK/LIGHT)
+// ========================================
+class ThemeSwitcher {
+    constructor() {
+        this.btn = document.getElementById('theme-toggle');
+        this.root = document.documentElement;
+        this.storageKey = 'portfolio-theme';
+    }
+
+    init() {
+        if (!this.btn) return;
+
+        // Initialize theme
+        const savedTheme = localStorage.getItem(this.storageKey);
+        
+        if (savedTheme) {
+            this.applyTheme(savedTheme);
+        } else {
+            // Check system preference
+            const systemTheme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+            this.applyTheme(systemTheme);
+        }
+
+        // Listen for system changes (if no manual override)
+        window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', e => {
+            if (!localStorage.getItem(this.storageKey)) {
+                this.applyTheme(e.matches ? 'light' : 'dark');
+            }
+        });
+
+        // Manual toggle
+        this.btn.addEventListener('click', () => {
+            const currentTheme = this.root.getAttribute('data-theme') || 'dark';
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            this.applyTheme(newTheme);
+            localStorage.setItem(this.storageKey, newTheme);
+        });
+    }
+
+    applyTheme(theme) {
+        this.root.setAttribute('data-theme', theme);
+        
+        // Custom event for other modules (like 3D background)
+        window.dispatchEvent(new CustomEvent('themeChanged', { detail: { theme } }));
+    }
+}
+
+// ========================================
 // PERFORMANCE OPTIMIZATION
 // ========================================
 class PerformanceOptimizer {
@@ -584,6 +666,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Performance Optimizer
     const performanceOptimizer = new PerformanceOptimizer();
     performanceOptimizer.init();
+
+    // Theme Switcher
+    const themeSwitcher = new ThemeSwitcher();
+    themeSwitcher.init();
 });
 
 // ========================================
@@ -609,3 +695,24 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 window.addEventListener('load', () => {
     document.body.classList.add('loaded');
 });
+
+// Copy Email Function
+function copyEmail() {
+    const email = 'shukladivyansh953@gmail.com';
+    const btn = document.getElementById('copyEmailBtn');
+    const originalContent = btn.innerHTML;
+
+    navigator.clipboard.writeText(email).then(() => {
+        btn.innerHTML = '<i class="fas fa-check"></i> <span>Email Copied!</span>';
+        btn.style.borderColor = '#22c55e';
+        btn.style.color = '#22c55e';
+
+        setTimeout(() => {
+            btn.innerHTML = originalContent;
+            btn.style.borderColor = '';
+            btn.style.color = '';
+        }, 2000);
+    }).catch(err => {
+        console.error('Failed to copy!', err);
+    });
+}

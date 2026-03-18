@@ -58,9 +58,15 @@
                 <li><a href="#achievements" class="nav-link">Achievements</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <div class="menu-toggle">
-                <span></span>
-                <span></span>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+                    <i class="fas fa-moon dark-icon"></i>
+                    <i class="fas fa-sun light-icon"></i>
+                </button>
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </div>
     </nav>
@@ -121,7 +127,7 @@
                     <div class="profile-card">
                         <div class="profile-image-container">
                             <div class="profile-image-glow"></div>
-                            <img src="assets/images/profile.jpg" alt="Divyansh Shukla" class="profile-image-real">
+                            <img src="assets/images/profile.png" alt="Divyansh Shukla" class="profile-image-real">
                         </div>
                         <h3 class="profile-name">Divyansh Shukla</h3>
                         <p class="profile-role">AI Builder & Automation Expert</p>
@@ -463,7 +469,7 @@
                     <div class="project-visual">
                         <div class="project-visual-inner">
                             <div class="project-visual-overlay"></div>
-                            <div class="project-visual-temp" style="width: 100%; height: 100%; background: linear-gradient(135deg, #1a1a2e, #16213e); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 2rem; font-weight: 700;">CAMPUSPREP</div>
+                            <img src="assets/images/projects/campusprep.in_.png" alt="CampusPrep.in Screenshot" class="project-image-real">
                         </div>
                     </div>
                     <div class="project-details">
@@ -475,14 +481,14 @@
                             <span class="project-type"><i class="fas fa-brain"></i> AI Learning</span>
                         </div>
                         <p class="project-desc-large">
-                            A specialized learning platform for <strong>RGPV B.Tech</strong> students. It provides subject-wise analytics, solved/unsolved <strong>PYQs</strong>, short notes, and branch-specific curriculum. Students can generate custom notes and track their preparation through individual analytics.
+                            A primary study hub for <strong>RGPV B.Tech</strong> students. Select your branch and semester to access branch-specific <strong>Curriculum, Solved/Unsolved PYQs, Short Notes, and Important Questions</strong>. Includes Subject Analytics and a personalized workspace to create your own notes and practice questions.
                         </p>
                         <div class="project-impact-box">
                             <i class="fas fa-chart-line"></i>
                             <span><strong>Analytics:</strong> Includes subject-level performance metrics and AI-driven recommendations based on RGPV exam patterns.</span>
                         </div>
                         <div class="project-tech-stack">
-                            <span class="tech-pill"><i class="fas fa-bolt"></i> FastAPI</span>
+                            <span class="tech-pill"><i class="fas fa-code"></i> Django</span>
                             <span class="tech-pill"><i class="fas fa-database"></i> PostgreSQL</span>
                             <span class="tech-pill"><i class="fas fa-brain"></i> AI Analysis</span>
                             <span class="tech-pill"><i class="fas fa-file-alt"></i> PYQ Engine</span>
@@ -501,7 +507,7 @@
                     <div class="project-visual">
                         <div class="project-visual-inner">
                             <div class="project-visual-overlay"></div>
-                            <div class="project-visual-temp" style="width: 100%; height: 100%; background: linear-gradient(135deg, #6c5ce7, #a29bfe); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 2rem; font-weight: 700;">LOCI AI</div>
+                            <img src="assets/images/projects/loci.naravirtual.in_.png" alt="Loci AI Screenshot" class="project-image-real">
                         </div>
                     </div>
                     <div class="project-details">
@@ -533,16 +539,54 @@
                     </div>
                 </article>
 
-                <!-- Project 3: NaraVirtual.in -->
+                <!-- Project 3: synapse.naravirtual.in -->
                 <article class="project-showcase-item" data-scroll-reveal>
                     <div class="project-visual">
                         <div class="project-visual-inner">
                             <div class="project-visual-overlay"></div>
-                            <div class="project-visual-temp" style="width: 100%; height: 100%; background: linear-gradient(135deg, #2d3436, #000); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 2rem; font-weight: 700;">NARAVIRTUAL Hub</div>
+                            <img src="assets/images/projects/synapse.naravirtual.in_.png" alt="Synapse AI Screenshot" class="project-image-real">
                         </div>
                     </div>
                     <div class="project-details">
                         <div class="project-number-large">03</div>
+                        <h3 class="project-title-large">Synapse-S: AI Sales Agent</h3>
+                        <div class="project-meta">
+                            <span class="project-type"><i class="fas fa-robot"></i> AI Automation</span>
+                            <span class="project-separator">•</span>
+                            <span class="project-type"><i class="fas fa-database"></i> SQL Tunneling</span>
+                        </div>
+                        <p class="project-desc-large">
+                            A high-conviction <strong>AI Sales Agent</strong> that captures leads and handles orders end-to-end. Built on the <strong>Model Context Protocol (MCP)</strong>, it creates secure tunnels into your APIs and databases for real-time sales execution.
+                        </p>
+                        <div class="project-impact-box">
+                            <i class="fas fa-microchip"></i>
+                            <span><strong>NER Engine:</strong> Uses advanced <strong>Named Entity Recognition (NER)</strong> to extract customer intent and product details from natural language conversations.</span>
+                        </div>
+                        <div class="project-tech-stack">
+                            <span class="tech-pill"><i class="fas fa-code"></i> Django</span>
+                            <span class="tech-pill"><i class="fas fa-brain"></i> Spacy NER</span>
+                            <span class="tech-pill"><i class="fas fa-bolt"></i> MCP Architecture</span>
+                            <span class="tech-pill"><i class="fas fa-shield-alt"></i> API Security</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://synapse.naravirtual.in" target="_blank" class="btn btn-primary btn-sm">
+                                <span class="btn-text">Visit Live</span>
+                                <span class="btn-icon"><i class="fas fa-external-link-alt"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4: NaraVirtual.in -->
+                <article class="project-showcase-item" data-scroll-reveal>
+                    <div class="project-visual">
+                        <div class="project-visual-inner">
+                            <div class="project-visual-overlay"></div>
+                            <img src="assets/images/projects/naravirtual.in_.png" alt="NaraVirtual Hub Screenshot" class="project-image-real">
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-number-large">04</div>
                         <h3 class="project-title-large">NaraVirtual.in Hub</h3>
                         <div class="project-meta">
                             <span class="project-type"><i class="fas fa-cloud"></i> AI SaaS Platform</span>
@@ -570,16 +614,16 @@
                     </div>
                 </article>
 
-                <!-- Project 4: SCANCROS.in -->
+                <!-- Project 5: SCANCROS.in -->
                 <article class="project-showcase-item" data-scroll-reveal>
                     <div class="project-visual">
                         <div class="project-visual-inner">
                             <div class="project-visual-overlay"></div>
-                            <div class="project-visual-temp" style="width: 100%; height: 100%; background: linear-gradient(135deg, #d63031, #000); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 2rem; font-weight: 700;">SCANCROS</div>
+                            <img src="assets/images/projects/scancros.in_.png" alt="SCANCROS Screenshot" class="project-image-real">
                         </div>
                     </div>
                     <div class="project-details">
-                        <div class="project-number-large">04</div>
+                        <div class="project-number-large">05</div>
                         <h3 class="project-title-large">SCANCROS.in</h3>
                         <div class="project-meta">
                             <span class="project-type"><i class="fas fa-shield-alt"></i> Cybersecurity</span>
@@ -596,7 +640,7 @@
                         <div class="project-tech-stack">
                             <span class="tech-pill"><i class="fab fa-python"></i> Python</span>
                             <span class="tech-pill"><i class="fas fa-search"></i> Vuln Scanning</span>
-                            <span class="tech-pill"><i class="fas fa-robot"></i> Automation</span>
+                            <span class="tech-pill"><i class="fas fa-cogs"></i> Automation</span>
                         </div>
                         <div class="project-actions">
                             <a href="https://scancros.in" target="_blank" class="btn btn-primary btn-sm">
@@ -607,16 +651,16 @@
                     </div>
                 </article>
 
-                <!-- Project 5: JARVIS AI -->
+                <!-- Project 6: JARVIS AI Assistant -->
                 <article class="project-showcase-item" data-scroll-reveal>
                     <div class="project-visual">
                         <div class="project-visual-inner">
                             <div class="project-visual-overlay"></div>
-                            <div class="project-visual-temp" style="width: 100%; height: 100%; background: linear-gradient(135deg, #0984e3, #000); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 2rem; font-weight: 700;">JARVIS</div>
+                            <div class="project-visual-temp" style="width: 100%; height: 100%; background: linear-gradient(135deg, #0984e3, #000); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 2rem; font-weight: 700;">JARVIS AI</div>
                         </div>
                     </div>
                     <div class="project-details">
-                        <div class="project-number-large">05</div>
+                        <div class="project-number-large">06</div>
                         <h3 class="project-title-large">JARVIS: AI Assistant</h3>
                         <div class="project-meta">
                             <span class="project-type"><i class="fas fa-microphone"></i> Voice UI</span>
@@ -626,13 +670,20 @@
                         <p class="project-desc-large">
                             Designed a voice-controlled AI assistant with real-time responses, inspired by Iron Man's interface. Enabled system control and feedback loop using AI models.
                         </p>
+                        <div class="project-impact-box">
+                            <i class="far fa-play-circle"></i>
+                            <span><strong>Demo Links:</strong> 
+                                <a href="https://youtu.be/mFasYOnV24Q?si=fX2K8ybeN79tK0u3" target="_blank" class="text-link">Live Interaction</a> | 
+                                <a href="https://youtu.be/L8V67F6MvXo?si=sXy8Gz-o8nK3qXzH" target="_blank" class="text-link">System Flow</a>
+                            </span>
+                        </div>
                         <div class="project-tech-stack">
                             <span class="tech-pill"><i class="fab fa-python"></i> Python</span>
                             <span class="tech-pill"><i class="fas fa-wave-square"></i> Speech Rec.</span>
                             <span class="tech-pill"><i class="fas fa-brain"></i> ML Models</span>
                         </div>
                         <div class="project-actions">
-                            <a href="https://www.youtube.com/watch?v=0e9AmmVN4NU" target="_blank" class="btn btn-primary btn-sm">
+                            <a href="https://youtu.be/mFasYOnV24Q?si=fX2K8ybeN79tK0u3" target="_blank" class="btn btn-primary btn-sm">
                                 <span class="btn-text">Watch Demo</span>
                                 <span class="btn-icon"><i class="fab fa-youtube"></i></span>
                             </a>
@@ -640,63 +691,79 @@
                     </div>
                 </article>
 
-                <!-- Project 6: Gesture Control System -->
+                <!-- Project 7: Gesture Control System -->
                 <article class="project-showcase-item" data-scroll-reveal>
                     <div class="project-visual">
                         <div class="project-visual-inner">
                             <div class="project-visual-overlay"></div>
-                            <div class="project-visual-temp" style="width: 100%; height: 100%; background: linear-gradient(135deg, #00b894, #000); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 2rem; font-weight: 700;">GESTURE CONTROL</div>
-                        </div>
-                    </div>
-                    <div class="project-details">
-                        <div class="project-number-large">06</div>
-                        <h3 class="project-title-large">Gesture Control System</h3>
-                        <div class="project-meta">
-                            <span class="project-type"><i class="fas fa-hand-paper"></i> HCI</span>
-                            <span class="project-separator">•</span>
-                            <span class="project-type"><i class="fas fa-eye"></i> Computer Vision</span>
-                        </div>
-                        <p class="project-desc-large">
-                            Developed a touchless HCI interface that lets users control systems via hand gestures. Implemented gesture recognition using OpenCV and Python.
-                        </p>
-                        <div class="project-tech-stack">
-                            <span class="tech-pill"><i class="fab fa-python"></i> Python</span>
-                            <span class="tech-pill"><i class="fas fa-camera"></i> OpenCV</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="https://www.youtube.com/watch?v=6vzo15y_CwA" target="_blank" class="btn btn-primary btn-sm">
-                                <span class="btn-text">Watch Demo</span>
-                                <span class="btn-icon"><i class="fab fa-youtube"></i></span>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Project 7: WPA2 Cracking Demo -->
-                <article class="project-showcase-item" data-scroll-reveal>
-                    <div class="project-visual">
-                        <div class="project-visual-inner">
-                            <div class="project-visual-overlay"></div>
-                            <div class="project-visual-temp" style="width: 100%; height: 100%; background: linear-gradient(135deg, #6c5ce7, #000); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 2rem; font-weight: 700;">WPA2 CRACKING</div>
+                            <div class="project-visual-temp" style="width: 100%; height: 100%; background: linear-gradient(135deg, #f1c40f, #e67e22); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 2rem; font-weight: 700;">GESTURE AI</div>
                         </div>
                     </div>
                     <div class="project-details">
                         <div class="project-number-large">07</div>
-                        <h3 class="project-title-large">WPA2 Cracking Demo</h3>
+                        <h3 class="project-title-large">Gesture Control System</h3>
                         <div class="project-meta">
-                            <span class="project-type"><i class="fas fa-wifi"></i> Network Security</span>
+                            <span class="project-type"><i class="fas fa-hands"></i> Computer Vision</span>
                             <span class="project-separator">•</span>
-                            <span class="project-type"><i class="fas fa-user-shield"></i> Ethical Hacking</span>
+                            <span class="project-type"><i class="fas fa-mouse-pointer"></i> Virtual Mouse</span>
                         </div>
                         <p class="project-desc-large">
-                            Ethical hacking project demonstrating WPA2 security breaches. Automated password cracking pipeline using Hashcat for security education.
+                            Engineered a computer vision project allowing users to control their computer interface through hand gestures. Integrated MediaPipe for real-time tracking.
                         </p>
+                        <div class="project-impact-box">
+                            <i class="far fa-play-circle"></i>
+                            <span><strong>Demo Links:</strong> 
+                                <a href="https://youtu.be/p6c7_aXyQpQ?si=c-sS8r9n8nJ3uC3o" target="_blank" class="text-link">Full Control Demo</a> | 
+                                <a href="https://youtu.be/rV8R6S8kGnY?si=tX6V-a6P7V9a4fX3" target="_blank" class="text-link">VLC Automation</a>
+                            </span>
+                        </div>
                         <div class="project-tech-stack">
-                            <span class="tech-pill"><i class="fab fa-python"></i> Python</span>
-                            <span class="tech-pill"><i class="fas fa-key"></i> Hashcat</span>
+                            <span class="tech-pill"><i class="fab fa-python"></i> OpenCV</span>
+                            <span class="tech-pill"><i class="fas fa-project-diagram"></i> MediaPipe</span>
+                            <span class="tech-pill"><i class="fas fa-mouse"></i> PyAutoGUI</span>
                         </div>
                         <div class="project-actions">
-                            <a href="https://youtu.be/lsJJ6of6vSk" target="_blank" class="btn btn-primary btn-sm">
+                            <a href="https://youtu.be/p6c7_aXyQpQ?si=c-sS8r9n8nJ3uC3o" target="_blank" class="btn btn-primary btn-sm">
+                                <span class="btn-text">Watch Demo</span>
+                                <span class="btn-icon"><i class="fab fa-youtube"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 8: WPA2 Cracking Demo -->
+                <article class="project-showcase-item" data-scroll-reveal>
+                    <div class="project-visual">
+                        <div class="project-visual-inner">
+                            <div class="project-visual-overlay"></div>
+                            <div class="project-visual-temp" style="width: 100%; height: 100%; background: linear-gradient(135deg, #2ecc71, #27ae60); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 2rem; font-weight: 700;">PEN-TESTING</div>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-number-large">08</div>
+                        <h3 class="project-title-large">WPA2 Cracking Demo</h3>
+                        <div class="project-meta">
+                            <span class="project-type"><i class="fas fa-wifi"></i> WiFi Security</span>
+                            <span class="project-separator">•</span>
+                            <span class="project-type"><i class="fas fa-lock-open"></i> Ethical Hacking</span>
+                        </div>
+                        <p class="project-desc-large">
+                            A research project demonstrating WPA2 handshake capture and offline brute-force cracking to highlight wireless security weaknesses.
+                        </p>
+                        <div class="project-impact-box">
+                            <i class="far fa-play-circle"></i>
+                            <span><strong>Demo Links:</strong> 
+                                <a href="https://youtu.be/vQ8M4S4yD3I?si=j-Xk7-sVvVb-V-pB" target="_blank" class="text-link">Handshake Capture</a> | 
+                                <a href="https://youtu.be/kI9W7X4MvYQ?si=m_mG1s-m8nK3qXzH" target="_blank" class="text-link">Cracking Process</a>
+                            </span>
+                        </div>
+                        <div class="project-tech-stack">
+                            <span class="tech-pill"><i class="fas fa-user-secret"></i> Aircrack-ng</span>
+                            <span class="tech-pill"><i class="fas fa-terminal"></i> Linux Ops</span>
+                            <span class="tech-pill"><i class="fas fa-shield-virus"></i> Sec Research</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://youtu.be/vQ8M4S4yD3I?si=j-Xk7-sVvVb-V-pB" target="_blank" class="btn btn-primary btn-sm">
                                 <span class="btn-text">Watch Demo</span>
                                 <span class="btn-icon"><i class="fab fa-youtube"></i></span>
                             </a>
@@ -842,37 +909,34 @@
                     </div>
                 </div>
 
-                <div class="contact-form-wrapper" data-scroll-reveal>
-                    <form class="contact-form-premium" id="contact-form" action="https://formspree.io/f/mkogladz"
-                        method="POST">
-                        <h3 class="form-title">Send a Message</h3>
-                        <div class="form-grid">
-                            <div class="form-group-premium">
-                                <input type="text" id="name" name="name" required placeholder=" ">
-                                <label for="name">Your Name</label>
-                                <i class="fas fa-user input-icon"></i>
+                <div class="contact-cta-wrapper" data-scroll-reveal>
+                    <div class="contact-cta-box">
+                        <h3 class="cta-title">Ready to Start a Project?</h3>
+                        <p class="cta-desc">I'm currently available for full-time roles, ambitious freelance projects, and technical collaborations. Let’s create something extraordinary.</p>
+                        
+                        <div class="cta-action-group">
+                            <a href="mailto:shukladivyansh953@gmail.com" class="btn-premium cta-main-btn">
+                                <span class="btn-text">Send me an Email</span>
+                                <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+                            </a>
+                            
+                            <div class="cta-secondary-actions">
+                                <button class="btn-glass-secondary" onclick="copyEmail()" id="copyEmailBtn">
+                                    <i class="far fa-copy"></i>
+                                    <span>Copy Email Address</span>
+                                </button>
+                                <a href="https://linkedin.com/in/thedivyanshshukla" target="_blank" class="btn-glass-secondary">
+                                    <i class="fab fa-linkedin-in"></i>
+                                    <span>DM on LinkedIn</span>
+                                </a>
                             </div>
-                            <div class="form-group-premium">
-                                <input type="email" id="email" name="email" required placeholder=" ">
-                                <label for="email">Your Email</label>
-                                <i class="fas fa-envelope input-icon"></i>
-                            </div>
                         </div>
-                        <div class="form-group-premium">
-                            <input type="text" id="subject" name="subject" required placeholder=" ">
-                            <label for="subject">Subject</label>
-                            <i class="fas fa-tag input-icon"></i>
+
+                        <div class="cta-footer-note">
+                            <i class="fas fa-info-circle"></i>
+                            <span>I typically respond within 12-24 hours.</span>
                         </div>
-                        <div class="form-group-premium">
-                            <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
-                            <label for="message">Your Message</label>
-                            <i class="fas fa-comment-alt input-icon textarea-icon"></i>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-lg btn-glow">
-                            <span class="btn-text">Send Message</span>
-                            <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
-                        </button>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -882,7 +946,7 @@
     <footer class="footer">
         <div class="footer-container">
             <p class="footer-quote">"The best code is the code that ships."</p>
-            <p class="footer-text">© 2024-25 Divyansh Shukla • Built with intention • Designed for impact</p>
+            <p class="footer-text">© 2026 Divyansh Shukla • Built with intention • Designed for impact</p>
         </div>
     </footer>
 
