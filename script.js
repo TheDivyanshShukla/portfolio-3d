@@ -18,7 +18,7 @@ class Preloader {
     }
 
     animateCounter() {
-        const duration = 2000;
+        const duration = 500;
         const start = Date.now();
 
         const animate = () => {
