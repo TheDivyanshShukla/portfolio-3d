@@ -427,6 +427,15 @@ body {
     margin-bottom: 40px;
 }
 
+.hero-title-name {
+    display: block;
+    font-size: clamp(20px, 3vw, 40px);
+    color: var(--electric-blue);
+    letter-spacing: 0.1em;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
 .hero-title-line {
     display: block;
     overflow: hidden;
