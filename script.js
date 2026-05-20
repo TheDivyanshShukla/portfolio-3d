@@ -631,6 +631,11 @@ class PerformanceOptimizer {
 // INITIALIZE ALL MODULES
 // ========================================
 document.addEventListener('DOMContentLoaded', () => {
+    // Initialize Lucide Icons
+    if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+    }
+
     // Preloader
     const preloader = new Preloader();
     preloader.init();
