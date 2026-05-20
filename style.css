@@ -2314,20 +2314,18 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--glass-bg);
+    background: var(--surface-dark);
     border: 1px solid var(--glass-border);
     border-radius: 20px;
-    color: var(--text-primary);
+    color: var(--text-secondary);
     font-size: 26px;
-    transition: all 0.4s var(--transition-bounce);
-    position: relative;
-    overflow: hidden;
+    transition: all 0.3s ease;
 }
 
 .social-btn-large:hover {
-    transform: translateY(-10px);
-    color: var(--electric-blue);
-    border-color: var(--electric-blue);
+    transform: translateY(-5px);
+    color: var(--text-primary);
+    border-color: var(--text-secondary);
 }
 
 /* ========================================
